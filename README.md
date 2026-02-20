@@ -37,11 +37,11 @@ Version mobile-first (React/Vite) qui simule le parcours patient : recherche de
 5. Assurance via écran Protection (paiement simulé)
 
 ## Installation
-```bash
+
 npm install
 npm run dev    # http://localhost:5173
 npm run build  # build production
-```
+
 
 ## Personnalisation
 - Données : `src/app/data/mockData.ts`
