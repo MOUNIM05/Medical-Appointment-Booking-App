@@ -1,241 +1,54 @@
-🏥 Medical Appointment Booking App – Senior Portfolio Version
-
-Version mobile-first avec React + Vite : application de démonstration pour la réservation de rendez-vous médicaux, la messagerie avec les médecins, le suivi d’itinéraire et la gestion d’assurance santé (mock côté client).
-
-✅ Objectif : démontrer compétences full-stack, UI/UX, architecture modulable et design system avancé.
-
-📌 Table des matières
-
-Présentation
-
-Aperçus UI/UX
-
-Stack Technique & Architecture
-
-Fonctionnalités clés
-
-Architecture du Projet
-
-Flux Utilisateur
-
-Installation & Setup
-
-Personnalisation & Design System
-
-Choix Techniques Avancés
-
-Limitations et Mocks
-
-Perspectives d’Évolution
-
-Licence & Crédit
-
-🎯 Présentation
-
-Cette application simule une expérience complète de patient digital :
-
-Interface mobile-first responsive
-
-Navigation fluide sur toutes les sections
-
-Design moderne et cohérent avec un design system basé sur OKLCH Tokens + Tailwind
-
-Simulation réaliste avec données mock pour démonstration
-
-Valeur ajoutée pour le portfolio senior :
-
-Structure projet modulable
-
-Design system maintenable
-
-UI/UX axée sur les besoins utilisateur
-
-Code prêt à être intégré dans un vrai backend
-
-🖼 Aperçus UI/UX
-<p align="center"> <img src="./public/screen-1.png" width="210"/> <img src="./public/screen-2.png" width="210"/> <img src="./public/screen-3.png" width="210"/> <img src="./public/screen-4.png" width="210"/> </p> <p align="center"> <img src="./public/screen-5.png" width="210"/> <img src="./public/screen-6.png" width="210"/> <img src="./public/screen-7.png" width="210"/> <img src="./public/screen-8.png" width="210"/> </p>
-⚙️ Stack Technique & Architecture
-
-Frontend : React + Vite, TypeScript, Tailwind CSS, SVG pour itinéraire
-Design System : Tokens OKLCH, composants réutilisables, layout modulable
-Simulation / Mocks : localStorage, données mock, SVG static
-
-Principes appliqués :
-
-Composants réutilisables et découplés
-
-Architecture feature-based
-
-Mobile-first design + responsive
-
-Mock data pour prototypage rapide
-
-🚀 Fonctionnalités Clés
-Accueil
-
-Hero CTA
-
-Recherche rapide avec filtres
-
-Médecins recommandés
-
-Historique des RDV
-
-Notifications mock (24h / 1h)
-
-Recherche
-
-Texte + spécialité
-
-Cartes interactives des médecins
-
-Profil Médecin
-
-Note, expérience, statut en ligne (mock)
-
-Créneaux sélectionnables
-
-Appel audio / vidéo (simulé)
-
-Chat intégré (simulé)
-
-Réservation & Rendez-vous
-
-Sélection date/heure
-
-Confirmation et itinéraire
-
-Onglets RDV à venir / passés
-
-Annulation possible
-
-Messagerie
-
-Conversations par médecin
-
-Actions audio/vidéo simulées
-
-Assurance
-
-Choix plan santé (mock paiement)
-
-Bouton Payer (simulation)
-
-Itinéraire
-
-SVG stylisé + étapes listées
-
-Profil Patient
-
-Infos utilisateur
-
-Notifications toggle
-
-🏗 Architecture du Projet
-src/
-│
-├── app/
-│   ├── pages/
-│   │   ├── Home
-│   │   ├── Search
-│   │   ├── DoctorProfile
-│   │   ├── BookingConfirmation
-│   │   ├── Appointments
-│   │   ├── Messages
-│   │   ├── Protection
-│   │   ├── Itinerary
-│   │   ├── Profile
-│   │   └── NotFound
-│   │
-│   ├── components/
-│   │   ├── AppLayout
-│   │   ├── MobileNav
-│   │   ├── DoctorCard
-│   │   ├── AppointmentCard
-│   │   └── UI génériques
-│   │
-│   └── data/
-│       └── mockData.ts
-│
-├── styles/
-│   ├── theme.css
-│   ├── tailwind.css
-│   ├── fonts.css
-│   └── index.css
-│
-public/
-│   ├── screen-1..8.png
-│   ├── background.png / avif
-│   └── favicon
-🔄 Flux Utilisateur
-
-Home → Recherche ou médecin recommandé
-
-Profil médecin → Créneau sélectionné → Confirmation
-
-Liste RDV → Itinéraire ou Annulation
-
-Messagerie accessible depuis navigation ou profil médecin
-
-Protection → Simulation paiement
-
-🧪 Installation & Setup
+# Medical Appointment Booking App
+
+Version mobile-first (React/Vite) qui simule le parcours patient : recherche de médecins, réservation, messagerie, itinéraire et assurance (mocks côté client).
+
+## Sommaire
+- Fonctionnalités
+- Architecture
+- Flux utilisateur
+- Installation
+- Personnalisation
+- Limites
+
+## Fonctionnalités
+- Accueil : héro CTA, recherche rapide, stats, médecins recommandés, historique, bannière rappels (24h / 1h, mock localStorage).
+- Recherche : filtre texte/spécialité, cartes médecins.
+- Profil médecin : note, expérience, créneaux sélectionnables, statut en ligne, actions Appel audio / Appel vidéo (simulées), accès chat.
+- Réservation : choix date/heure, confirmation, lien direct Itinéraire.
+- Rendez-vous : onglets À venir / Passés, annulation, bouton Itinéraire par RDV.
+- Messagerie : conversations par médecin, chat simulé, actions audio/vidéo.
+- Assurance (mock paiement) : écran Protection avec plans + bouton Payer.
+- Itinéraire : tracé SVG stylisé + étapes listées.
+- Profil : infos patient, switch notifications.
+- Navigation persistante : barre fixe (Accueil, Recherche, RDV, Profil) via `AppLayout`.
+
+## Architecture
+- `src/app/pages/` : Home, Search, DoctorProfile, BookingConfirmation, Appointments, Profile, Messages, Protection, Itinerary, NotFound.
+- `src/app/components/` : MobileNav, AppLayout, UI génériques, DoctorCard, AppointmentCard.
+- `src/app/data/mockData.ts` : médecins, rendez-vous (mock).
+- `src/styles/` : `theme.css`, `tailwind.css`, `fonts.css`, `index.css`.
+- `public/` : uniquement `favicon.ico` (assets nettoyés).
+
+## Flux utilisateur
+1. Home → Recherche ou médecin recommandé  
+2. Profil médecin → sélection de créneau → Confirmation  
+3. RDV → Itinéraire ou Annulation  
+4. Messages accessibles via nav ou profil médecin  
+5. Assurance via écran Protection (paiement simulé)
+
+## Installation
+```bash
 npm install
-npm run dev       # http://localhost:5173
-npm run build     # build production
-npm run preview   # preview build
-🎨 Personnalisation & Design System
+npm run dev    # http://localhost:5173
+npm run build  # build production
+```
 
-Données : src/app/data/mockData.ts
+## Personnalisation
+- Données : `src/app/data/mockData.ts`
+- Palette / tokens / rayons : `src/styles/theme.css`
+- Assets : ajouter/remplacer dans `public/` (actuellement seulement `favicon.ico`)
 
-Palette / tokens / rayons : src/styles/theme.css
-
-Assets (images, fond, favicon) : public/
-
-Design system maintenable et facilement adaptable pour un vrai projet production.
-
-🧠 Choix Techniques Avancés
-
-Architecture feature-based
-
-Mobile-first + responsive
-
-Composants modulables
-
-UI/UX cohérent et maintenable
-
-Mock data pour prototypage rapide
-
-Tokens OKLCH pour couleurs, accessible et futur-proof
-
-⚠️ Limitations & Mocks
-
-Pas de backend réel
-
-Authentification simulée
-
-Paiement simulé
-
-Messagerie simulée
-
-Statut en ligne simulé
-
-Itinéraire statique
-
-🔮 Perspectives d’Évolution
-
-Backend réel (Node.js / Firebase)
-
-Auth JWT / OAuth
-
-Paiement Stripe / Paypal
-
-WebSocket pour chat temps réel
-
-Notifications push
-
-Géolocalisation réelle (Google Maps API)
-
-Dashboard admin
-
-Version PWA et responsive desktop
+## Limites
+- Pas de backend ni d’auth réels (tout mock).
+- Paiement, notifications, messagerie, statut en ligne : simulés.
+- Itinéraire : illustration statique (SVG).
